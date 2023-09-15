@@ -85,7 +85,24 @@ export function App() {
           <Separator />
 
           <form className="space-y-6">
-            <div className="space-y-2">
+            <div className="space-y-1">
+              <Label>Prompt</Label>
+              <Select >
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecione um prompt"/>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="2">Item 1</SelectItem>
+                  <SelectItem value="1">Item 2</SelectItem>
+                  <SelectItem value="3">Item 3</SelectItem>
+                </SelectContent>
+              </Select>
+              <span className="block text-xs text-muted-foreground italic">
+                Você poderá customizar essa opção em breve
+              </span>
+            </div>
+
+            <div className="space-y-1">
               <Label>Modelo</Label>
               <Select defaultValue="1">
                 <SelectTrigger>
@@ -106,7 +123,7 @@ export function App() {
 
             <div className="space-y-4">
               <Label>Modelo</Label>
-              <Slider min={0} max={1} step={0.1}/>
+              <Slider min={0} max={1} step={0.1} />
 
               <span className="block text-xs text-muted-foreground italic">
                 Valores mais altos tendem a deixar o resultado mais criativo e
@@ -114,11 +131,11 @@ export function App() {
               </span>
             </div>
 
-            <Separator/>
+            <Separator />
 
             <Button className="w-full" type="submit">
               Executar
-              <Wand2 className="w-4 h-4 ml-2"/>
+              <Wand2 className="w-4 h-4 ml-2" />
             </Button>
           </form>
         </aside>
